@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 
-import Header from './components/header'
+import Header from './components/Header'
 import Cards from './components/Cards'
 import AddMovie from './components/AddMovie'
 import Details from './components/Details'
