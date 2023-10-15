@@ -6,7 +6,6 @@ import AddMovie from './components/AddMovie'
 import Details from './components/Details'
 
 const App = () => {
-
   return (
       <div className='relative'>
         <Header/>
