@@ -29,15 +29,15 @@ const Cards = () => {
         : data?.map((e, i) => {
             return (
            <Link to={`/details/${e.id}`} key={i}  >
-                <div className='mt-6 mx-4 bg-blue-950 cursor-pointer rounded-lg relative duration-200 hover:-translate-y-1 shadow-2xl hover:shadow-slate-800'>
-                    <div className=' w-52 h-72'>
+                <div className='mt-6 mx-4 bg-red-950 cursor-pointer rounded-lg relative duration-200 border border-transparent hover:border-red-200 shadow-2xl hover:shadow-slate-800'>
+                    <div className='w-40 h-48'>
                         <img 
                             className='w-full h-full rounded-t-lg'
                             src={e.image} 
                         />
                     </div>
                     <div className='p-2'>
-                        <h1 className='font-semibold  text-2xl'>{e.title}</h1>
+                        <h1 className='sm:text-2xl text-xl'>{e.title}</h1>
                         <p> 
                             <ReactStars 
                                 half={true} 
@@ -45,7 +45,7 @@ const Cards = () => {
                                 edit={false}
                             />
                         </p>
-                        <p className='text-red-600 text-lg'>{e.year}</p>
+                        <p className='text-yellow-400'>{e.year}</p>
                     </div>
                 </div>
            </Link>

@@ -6,23 +6,23 @@ import { TailSpin } from 'react-loader-spinner';
 import swal from 'sweetalert';
 
 const Review = ({ id, prevRating, userRated }) => {
-    const [rating, setRating] = useState(0);
-    const [loading, setLoading] = useState(false);
-    const [ reviewsLoading, setReviewsLoading] = useState(false);
-    const [thought, setThought] = useState('');
-    const [ data, setData] = useState([]);
+    const [ rating, setRating ] = useState(0);
+    const [ loading, setLoading ] = useState(false);
+    const [ reviewsLoading, setReviewsLoading ] = useState(false);
+    const [ thought, setThought ] = useState('');
+    const [ data, setData ] = useState([]);
 
     const sendReview = async () => {
         setLoading(true);
         try {
             await addDoc(reviewsRef, {
                 movieid: id,
-                name: "Akhil",
+                name: "Anonymous",
                 rating: rating,
                 thoughts: thought,
                 timestamp: new Date().getTime(),
             })
-            const doc = doc(db, "movies", id);
+            const ref = doc(db, "movies", id);
             await updateDoc(ref, {
                 rating: rating + prevRating,
                 rated: userRated + 1,
