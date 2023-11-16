@@ -23,14 +23,14 @@ const Cards = () => {
     }, [])
 
   return (
-    <div className='flex flex-wrap justify-center items-center px-3 mt-2'>
+    <div className='flex flex-wrap justify-center items-center sm:px-3 px-0 mt-2'>
         {loading 
         ? <div className='w-full h-[80vh] flex justify-center items-center'><TailSpin height={60} color='red' /></div> 
         : data?.map((e, i) => {
             return (
            <Link to={`/details/${e.id}`} key={i}  >
                 <div className='mt-6 mx-4 bg-red-950 cursor-pointer rounded-lg relative duration-200 border border-transparent hover:border-red-200 shadow-2xl hover:shadow-slate-800'>
-                    <div className='w-40 h-48'>
+                    <div className=' w-36 h-48'>
                         <img 
                             className='w-full h-full rounded-t-lg'
                             src={e.image} 
